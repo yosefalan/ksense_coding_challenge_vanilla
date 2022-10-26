@@ -1,0 +1,1 @@
+# ksense_coding_challenge_vanilla
