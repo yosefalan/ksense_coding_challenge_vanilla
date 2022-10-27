@@ -25,9 +25,8 @@ const loadData = async () => {
   tableBody.innerHTML = userData;
   }
 
-  const displayPosts = (posts, name) => {
+  const displayPosts = (posts) => {
     postData = '';
-    postData += `<div class="card mb-3" style="background-color: #563D7C; color: white"><div class="card-title"><h3>Displaying Posts from ${name}</h3></div></div>`
     posts?.map((post) => {
       postData += `<div class="card mb-3" ><div class="card-title"><h3>${post.title}</h3></div><div class="card-body">${post.body}</div></div>`
     })
@@ -54,7 +53,7 @@ const loadData = async () => {
         selectedUserName = user.name
       }
     }
-    displayPosts(posts, selectedUserName);
+    displayPosts(posts);
   }
 
   const trs = document.getElementsByTagName("tr");
